@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ตารางเรียน 2/2569</title>
+<style>
+:root{--bg:#f4f4f1;--fg:#16161a;--mut:#6b6b72;--line:#e3e3df;--card:#fff;--ac:#4f46e5;--bad:#e5254b;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17171a;--fg:#f0f0f2;--mut:#a0a0a8;--line:#34343a;--card:#222226;--ac:#8b85ff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17171a;--fg:#f0f0f2;--mut:#a0a0a8;--line:#34343a;--card:#222226;--ac:#8b85ff;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:'Noto Sans Thai',system-ui,sans-serif;padding:16px 12px 230px}
+h1{font-size:22px;margin:4px 4px 2px}
+.sub{margin:0 4px 12px;color:var(--mut);font-size:13px}
+.bar{display:flex;gap:8px;margin:0 0 12px}
+button{font:inherit;border:0;border-radius:10px;padding:10px 14px;background:var(--ac);color:#fff;font-weight:600;font-size:14px}
+button.g{background:var(--card);color:var(--fg);border:1px solid var(--line)}
+button.d{background:var(--bad)}
+button:disabled{opacity:.45}
+#cf{margin:0 0 12px}
+.cf{background:color-mix(in srgb,var(--bad) 12%,var(--card));border:1px solid var(--bad);border-radius:10px;padding:8px 12px;font-size:13px;line-height:1.6}
+.ok{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:13px;color:var(--mut)}
+.wrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,.06)}
+.r{display:flex;border-bottom:1px solid var(--line)}
+.r:last-child{border-bottom:0}
+.dn{flex:0 0 58px;position:sticky;left:0;z-index:6;background:var(--card);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;border-right:1px solid var(--line)}
+.t{position:relative;flex:0 0 auto;background-image:repeating-linear-gradient(90deg,transparent 0 79px,var(--line) 79px 80px)}
+.h{height:34px}
+.h .t span{position:absolute;top:10px;font-size:11px;color:var(--mut);transform:translateX(4px)}
+.b{position:absolute;height:66px;border-radius:10px;border:2px solid;padding:4px 7px;font-size:11px;line-height:1.35;color:#16161a;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.b b{font-size:11.5px}
+.b .lk{position:absolute;top:2px;right:4px;font-size:10px;opacity:.7}
+.b.x{outline:2px dashed var(--bad);outline-offset:1px;background-image:repeating-linear-gradient(135deg,rgba(229,37,75,.14) 0 6px,transparent 6px 12px)!important}
+.b .w{position:absolute;bottom:2px;right:4px;font-size:10px;color:var(--bad);font-weight:700}
+.b[data-u]{touch-action:none;cursor:grab}.b.mv{opacity:.35}
+.pv{position:absolute;top:6px;height:66px;border:2px dashed var(--ac);background:color-mix(in srgb,var(--ac) 20%,transparent);border-radius:10px;pointer-events:none;z-index:4}
+.tray{position:fixed;left:0;right:0;bottom:0;z-index:15;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(0,0,0,.14);padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px))}
+.tray h3{margin:0 0 6px;font-size:13px}
+.tray h3 span{color:var(--mut);font-weight:400}
+.ts{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.cc{flex:0 0 178px;border:2px solid;border-radius:12px;padding:6px 8px;font-size:11px;line-height:1.4;touch-action:pan-x;user-select:none;-webkit-user-select:none;cursor:grab;color:#16161a}
+.cc.on{opacity:.5}
+.cc .nm{font-weight:600;font-size:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:34px}
+.cc .cw{color:var(--bad);font-weight:700}
+.gh{position:fixed;z-index:50;pointer-events:none;width:140px;border-radius:10px;border:2px solid;padding:5px 8px;font-size:11px;line-height:1.35;color:#16161a;box-shadow:0 10px 24px rgba(0,0,0,.35)}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:30;display:flex;align-items:flex-end;justify-content:center}
+.ov[hidden]{display:none}
+.sh{background:var(--card);width:100%;max-width:520px;border-radius:20px 20px 0 0;padding:18px 16px calc(18px + env(safe-area-inset-bottom,0px));max-height:92vh;overflow:auto}
+.sh h2{margin:0 0 12px;font-size:17px}
+label{display:block;font-size:12px;color:var(--mut);margin:10px 0 4px}
+input,select{width:100%;font:inherit;font-size:15px;padding:9px 10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--fg)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sw{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.sw i{width:28px;height:28px;border-radius:50%;border:3px solid transparent;cursor:pointer}
+.sw i.on{border-color:var(--fg)}
+.sf{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.sf button{flex:1;padding:8px;font-size:13px;white-space:nowrap}
+.lkr{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:14px}
+.lkr input{width:20px;height:20px}
+.act{display:flex;gap:8px;margin-top:16px}
+.act button{flex:1}
+</style></head><body>
+<h1>ตารางเรียน 2/2569</h1>
+<p class="sub">ลากวิชาจากคลังด้านล่างมาวางในตาราง · ลากวิชาในตารางเพื่อเลื่อน แตะเพื่อแก้ไข · 🔒 = ล็อกไว้ (ปลดล็อกได้ในหน้าแก้ไข)</p>
+<div class="bar"><button id="add">＋ เพิ่มวิชาเอง</button><button id="rs" class="g">รีเซ็ต</button></div>
+<div id="cf"></div>
+<div class="wrap" id="wr"><div id="g"></div></div>
+<div class="tray"><h3>คลังวิชาที่สนใจ <span>· ลากไปวาง หรือแตะเพื่อเพิ่ม/เอาออก</span></h3><div class="ts" id="ts"></div></div>
+<div class="ov" id="ov" hidden><div class="sh">
+<h2 id="ttl">แก้ไขวิชา</h2>
+<div class="two"><div><label>รหัสวิชา</label><input id="code"></div><div><label>ห้อง</label><input id="room"></div></div>
+<label>ชื่อวิชา</label><input id="name">
+<div class="two"><div><label>วัน</label><select id="day"></select></div><div><label>สี</label><div class="sw" id="sw"></div></div></div>
+<div class="two"><div><label>เริ่ม</label><input type="time" id="st" step="900"></div><div><label>จบ</label><input type="time" id="en" step="900"></div></div>
+<div class="sf"><button class="g" id="m1">◀ −30 นาที</button><button class="g" id="p1">+30 นาที ▶</button><button class="g" id="rt">↺ เวลาเดิมของเซกชัน</button></div>
+<label>ผู้สอน / หมายเหตุ</label><input id="note">
+<div class="lkr"><input type="checkbox" id="lk"><span>🔒 ล็อกวิชานี้</span></div>
+<div class="act"><button class="g" id="cx">ปิด</button><button class="d" id="dl">ลบ</button><button id="sv">บันทึก</button></div>
+</div></div>
+<script>
+const DAYS=['จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์'],SH=['จ.','อ.','พ.','พฤ.','ศ.'],S0=480,S1=1260,HW=80;
+const PAL=[['#ffe9a8','#e0a800'],['#cfe8ff','#4a90d9'],['#ffd9cc','#e07050'],['#e3d9ff','#8a6fd6'],['#c8f0a8','#6bb33a'],['#ffd0e4','#d9588f'],['#bff1f7','#2aa6b8'],['#ffd7a8','#e8892b'],['#d6f5e3','#2fa66a'],['#f3e1ff','#b25fd6'],['#eeeccf','#a39a3a'],['#ffdede','#d65a5a']];
+const mk=(id,code,name,room,day,s,e,color,note)=>({id,code,name,room,day,start:s,end:e,color,locked:true,note:note||''});
+const DEF=()=>[
+mk('a','247-103','Physics Lab','EE Labs',0,780,950,1),
+mk('e','890-103G1','English on the Go','LA508(ศป)',0,600,710,7,'Sec 20 · อภิญญา จงวัฒนไพบูลย์ · สอบปลายภาค 9 มี.ค. 2570 13:30–15:30'),
+mk('b','247-107','Calculus 2','EE131',1,540,710,0),
+mk('c','247-112','Intro to Nanomaterials','EE213',1,780,950,3),
+mk('d','247-113','Digital and Logic Design','EE238',2,780,890,6),
+mk('f','247-113','Digital and Logic Design','EE238',3,540,650,6),
+mk('g','247-102','Physics','A403',3,780,860,5),
+mk('h','325-107','Chem Lab','Sci',3,780,950,4,'ปฏิบัติการเคมีพื้นฐานสำหรับวิศวกร · Sec 01'),
+mk('i','247-111','Electric Circuits','A403',4,540,710,2),
+mk('j','247-102','Physics','A403',4,780,890,5)];
+const sl=(d,a,b)=>({day:d,start:a,end:b});
+const CAT=[
+{id:'k1',code:'003-001',name:'ผู้นำจิตอาสาเพื่อการพัฒนาชุมชนอย่างยั่งยืน',sec:'02',cr:3,color:8,slots:[sl(3,540,710)]},
+{id:'k2',code:'336-216G8',name:'ยาและสุขภาพ',sec:'01',cr:2,color:9,slots:[sl(0,660,710),sl(2,660,710)]},
+{id:'k3',code:'193-031G8',name:'ธรรมชาติบำบัด',sec:'07',cr:2,color:10,slots:[sl(1,1140,1190),sl(3,1140,1190)]},
+{id:'k4',code:'135-171',name:'จิตวิวัฒน์เพื่อการพัฒนาศักยภาพตนเองแบบองค์รวม',sec:'01',cr:1,color:11,slots:[sl(1,960,1010)]},
+{id:'k5',code:'820-100G7',name:'รักษ์โลก รักษ์เรา',sec:'02',cr:2,color:4,slots:[sl(1,960,1070)]},
+{id:'k6',code:'200-103',name:'ชีวิตยุคใหม่ด้วยใจสีเขียว',sec:'01',cr:2,color:8,slots:[sl(1,1020,1110)]},
+{id:'k7',code:'200-104G4',name:'รู้เท่าทันปัญญาประดิษฐ์',sec:'01',cr:2,color:6,slots:[{day:0,start:600,end:720,free:true}]},
+{id:'k8',code:'315-102G8',name:'สุนทรียศาสตร์การถ่ายภาพ',sec:'04',cr:2,color:5,slots:[sl(3,900,1010)]},
+{id:'k9',code:'473-001G2A',name:'เงินทองต้องรอบรู้',sec:'01',cr:2,color:3,slots:[sl(1,960,1070)]},
+{id:'k10',code:'895-864G8',name:'ดนตรีตะวันตก',sec:'01',cr:2,color:1,slots:[sl(2,600,710)]},
+{id:'k11',code:'200-103G7',name:'ชีวิตยุคใหม่หัวใจสีเขียว',sec:'01',cr:2,color:8,slots:[sl(2,1020,1110)]},
+{id:'k12',code:'200-103G7',name:'ชีวิตยุคใหม่หัวใจสีเขียว',sec:'02',cr:2,color:8,slots:[sl(1,1020,1110)]},
+{id:'k13',code:'820-100G7',name:'รักษ์โลก รักษ์เรา',sec:'01',cr:2,color:4,slots:[sl(0,960,1070)]},
+{id:'k14',code:'820-200G7',name:'เมื่อทะเลปั่นป่วน',sec:'01',cr:2,color:6,slots:[sl(1,960,1070)]}];
+const KEY='tt2569v2';
+let L;try{L=JSON.parse(localStorage.getItem(KEY))}catch(e){}
+if(!Array.isArray(L)||!L.length)L=DEF();
+const sv=()=>{try{localStorage.setItem(KEY,JSON.stringify(L))}catch(e){}};
+const $=i=>document.getElementById(i);
+const T=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');
+const P=s=>{const a=(s||'0:0').split(':').map(Number);return a[0]*60+a[1]};
+const cl=(v,a,b)=>Math.max(a,Math.min(b,v));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function render(){
+const W=(S1-S0)/60*HW,pairs=[],bad=new Set();
+for(let i=0;i<L.length;i++)for(let j=i+1;j<L.length;j++){const a=L[i],b=L[j];if(a.day===b.day&&a.start<b.end&&b.start<a.end){bad.add(a.id);bad.add(b.id);pairs.push([a,b])}}
+$('cf').innerHTML=pairs.length?'<div class="cf"><b>⚠ วิชาที่เวลาชนกัน</b><br>'+pairs.map(p=>DAYS[p[0].day]+' · '+esc(p[0].code)+' ⇄ '+esc(p[1].code)).join('<br>')+'</div>':'<div class="ok">✓ ไม่มีวิชาชนกัน</div>';
+let h='<div class="r h"><div class="dn"></div><div class="t" style="width:'+W+'px">';
+for(let m=S0;m<S1;m+=60)h+='<span style="left:'+(m-S0)/60*HW+'px">'+T(m)+'</span>';
+h+='</div></div>';
+DAYS.forEach((d,di)=>{
+const list=L.filter(c=>c.day===di).sort((a,b)=>a.start-b.start),lanes=[];
+list.forEach(c=>{let i=lanes.findIndex(e=>e<=c.start);if(i<0){i=lanes.length;lanes.push(0)}lanes[i]=c.end;c.lane=i});
+const n=Math.max(1,lanes.length),ht=n*72+8;
+h+='<div class="r" style="height:'+ht+'px"><div class="dn">'+d+'</div><div class="t" data-d="'+di+'" style="width:'+W+'px;height:'+ht+'px">';
+list.forEach(c=>{const p=PAL[c.color]||PAL[0];
+h+='<div class="b'+(bad.has(c.id)?' x':'')+'" data-id="'+c.id+'"'+(c.locked?'':' data-u="1"')+' style="left:'+((c.start-S0)/60*HW+1)+'px;width:'+((c.end-c.start)/60*HW-3)+'px;top:'+(c.lane*72+6)+'px;background:'+p[0]+';border-color:'+p[1]+'">'+(c.locked?'<span class="lk">🔒</span>':'')+'<b>'+esc(c.code)+'</b><span>'+esc(c.name)+'</span><span>'+esc(c.room)+'</span>'+(bad.has(c.id)?'<span class="w">⚠ ชน</span>':'')+'</div>'});
+h+='</div></div>'});
+$('g').innerHTML=h;
+document.querySelectorAll('.b').forEach(e=>{const c=L.find(x=>x.id===e.dataset.id);if(c.locked)e.onclick=()=>edit(c,false);else e.addEventListener('pointerdown',ev=>bdrag(ev,c,e))});
+tray()}
+function hit(c){for(const s of c.slots){if(s.free)continue;const x=L.find(o=>o.src!==c.id&&o.day===s.day&&o.start<s.end&&s.start<o.end);if(x)return x.code}return''}
+function tray(){
+$('ts').innerHTML=CAT.map(c=>{const on=L.some(x=>x.src===c.id),p=PAL[c.color],w=on?'':hit(c);
+const tt=c.slots[0].free?'ไม่ระบุเวลา · ลากไปวางได้':c.slots.map(s=>SH[s.day]+' '+T(s.start)+'–'+T(s.end)).join(', ');
+return '<div class="cc'+(on?' on':'')+'" data-id="'+c.id+'" style="background:'+p[0]+';border-color:'+p[1]+'"><b>'+c.code+'</b>'+(on?' ✓ เพิ่มแล้ว':'')+'<div class="nm">'+esc(c.name)+'</div><div>'+tt+'</div><div>'+c.cr+' หน่วยกิต · Sec '+c.sec+'</div>'+(w?'<div class="cw">⚠ ชนกับ '+esc(w)+'</div>':'')+'</div>'}).join('');
+document.querySelectorAll('.cc').forEach(e=>{const c=CAT.find(k=>k.id===e.dataset.id);e.addEventListener('pointerdown',ev=>drag(ev,c))})}
+function place(c,dd,dt){
+c.slots.forEach((s,i)=>{const d=s.end-s.start,st=cl(s.start+dt,S0,S1-d);
+L.push({id:'c'+c.id+'_'+i+'_'+Date.now(),src:c.id,code:c.code,name:c.name,room:'',day:cl(s.day+dd,0,4),start:st,end:st+d,color:c.color,locked:false,note:'Sec '+c.sec+' · '+c.cr+' หน่วยกิต',orig:s.free?null:{day:s.day,start:s.start,end:s.end}})});
+sv();render()}
+function tap(c){
+if(L.some(x=>x.src===c.id)){L=L.filter(x=>x.src!==c.id);sv();render();return}
+if(c.slots[0].free){const s=c.slots[0];edit({code:c.code,name:c.name,color:c.color,day:s.day,start:s.start,end:s.end,note:'Sec '+c.sec+' · '+c.cr+' หน่วยกิต',src:c.id,orig:null},true);return}
+place(c,0,0)}
+function target(c,x,y){
+const t=document.elementsFromPoint(x,y).find(e=>e.classList&&e.classList.contains('t')&&e.dataset.d!==undefined);
+if(!t)return null;
+const s=c.slots[0],d=s.free?120:s.end-s.start,r=t.getBoundingClientRect(),m=S0+(x-r.left)/HW*60;
+const ns=cl(Math.round((m-d/2)/30)*30,S0,S1-d);
+return{t,day:+t.dataset.d,ns,d,s}}
+function drag(ev,c){
+const sx=ev.clientX,sy=ev.clientY,p=PAL[c.color];let on=false,gh,pv;
+const clean=()=>{if(gh)gh.remove();if(pv)pv.remove();removeEventListener('pointermove',mv);removeEventListener('pointerup',up);removeEventListener('pointercancel',cn)};
+const mv=e=>{
+if(!on){if(Math.hypot(e.clientX-sx,e.clientY-sy)<8)return;if(L.some(x=>x.src===c.id))return;on=true;gh=document.createElement('div');gh.className='gh';gh.style.background=p[0];gh.style.borderColor=p[1];gh.innerHTML='<b>'+esc(c.code)+'</b><br>'+esc(c.name);document.body.appendChild(gh)}
+gh.style.left=(e.clientX-70)+'px';gh.style.top=(e.clientY-36)+'px';
+const w=$('wr').getBoundingClientRect();
+if(e.clientY>w.top&&e.clientY<w.bottom){if(e.clientX>w.right-50)$('wr').scrollLeft+=14;else if(e.clientX<w.left+90)$('wr').scrollLeft-=14}
+if(pv){pv.remove();pv=null}
+const g=target(c,e.clientX,e.clientY);
+if(g){pv=document.createElement('div');pv.className='pv';pv.style.left=((g.ns-S0)/60*HW+1)+'px';pv.style.width=(g.d/60*HW-3)+'px';g.t.appendChild(pv)}};
+const up=e=>{
+const was=on,g=was?target(c,e.clientX,e.clientY):null;clean();
+if(!was){tap(c);return}
+if(g){const s=g.s;if(s.free){place({...c,slots:[{day:g.day,start:g.ns,end:g.ns+g.d}]},0,0);L.forEach(x=>{if(x.src===c.id)x.orig=null});sv();render()}else place(c,g.day-s.day,g.ns-s.start)}};
+const cn=()=>clean();
+addEventListener('pointermove',mv);addEventListener('pointerup',up);addEventListener('pointercancel',cn)}
+function bdrag(ev,c,el){
+const sx=ev.clientX,sy=ev.clientY,p=PAL[c.color]||PAL[0],fake={slots:[{day:c.day,start:c.start,end:c.end}]};let on=false,gh,pv;
+const clean=()=>{if(gh)gh.remove();if(pv)pv.remove();el.classList.remove('mv');removeEventListener('pointermove',mv);removeEventListener('pointerup',up);removeEventListener('pointercancel',clean)};
+const mv=e=>{
+if(!on){if(Math.hypot(e.clientX-sx,e.clientY-sy)<8)return;on=true;el.classList.add('mv');gh=document.createElement('div');gh.className='gh';gh.style.background=p[0];gh.style.borderColor=p[1];gh.innerHTML='<b>'+esc(c.code)+'</b><br>'+esc(c.name);document.body.appendChild(gh)}
+gh.style.left=(e.clientX-70)+'px';gh.style.top=(e.clientY-36)+'px';
+const w=$('wr').getBoundingClientRect();
+if(e.clientY>w.top&&e.clientY<w.bottom){if(e.clientX>w.right-50)$('wr').scrollLeft+=14;else if(e.clientX<w.left+90)$('wr').scrollLeft-=14}
+if(pv){pv.remove();pv=null}
+const g=target(fake,e.clientX,e.clientY);
+if(g){pv=document.createElement('div');pv.className='pv';pv.style.left=((g.ns-S0)/60*HW+1)+'px';pv.style.width=(g.d/60*HW-3)+'px';g.t.appendChild(pv)}};
+const up=e=>{const was=on,g=was?target(fake,e.clientX,e.clientY):null;clean();
+if(!was){edit(c,false);return}
+if(g){c.day=g.day;c.start=g.ns;c.end=g.ns+g.d;sv();render()}};
+addEventListener('pointermove',mv);addEventListener('pointerup',up);addEventListener('pointercancel',clean)}
+let cur=null,isNew=false,col=0;
+$('day').innerHTML=DAYS.map((d,i)=>'<option value="'+i+'">'+d+'</option>').join('');
+$('sw').innerHTML=PAL.map((p,i)=>'<i data-i="'+i+'" style="background:'+p[0]+';outline:2px solid '+p[1]+'"></i>').join('');
+document.querySelectorAll('#sw i').forEach(e=>e.onclick=()=>{if($('lk').checked)return;col=+e.dataset.i;paintSw()});
+function paintSw(){document.querySelectorAll('#sw i').forEach(e=>e.classList.toggle('on',+e.dataset.i===col))}
+function lockUI(){const k=$('lk').checked;['code','room','name','day','st','en','note','m1','p1','rt'].forEach(i=>$(i).disabled=k)}
+function edit(c,n){
+isNew=n;cur=n?Object.assign({id:'u'+Date.now(),code:'',name:'',room:'',day:0,start:600,end:720,color:0,locked:false,note:''},c||{}):c;
+$('ttl').textContent=n?'เพิ่มวิชาใหม่':'แก้ไขวิชา';
+$('code').value=cur.code;$('name').value=cur.name;$('room').value=cur.room||'';$('day').value=cur.day;
+$('st').value=T(cur.start);$('en').value=T(cur.end);$('note').value=cur.note||'';$('lk').checked=cur.locked;
+col=cur.color;paintSw();lockUI();$('dl').style.display=n?'none':'';$('rt').style.display=cur.orig?'':'none';$('ov').hidden=false}
+const shift=d=>{const s=P($('st').value)+d,e=P($('en').value)+d;if(s<S0||e>S1)return;$('st').value=T(s);$('en').value=T(e)};
+$('m1').onclick=()=>shift(-30);$('p1').onclick=()=>shift(30);
+$('rt').onclick=()=>{const o=cur.orig;$('day').value=o.day;$('st').value=T(o.start);$('en').value=T(o.end)};
+$('lk').onchange=lockUI;
+$('cx').onclick=()=>$('ov').hidden=true;
+$('ov').onclick=e=>{if(e.target.id==='ov')$('ov').hidden=true};
+$('sv').onclick=()=>{
+const lk=$('lk').checked;
+if(!lk||!cur.locked){
+const s=Math.max(S0,P($('st').value));let e=Math.min(S1,P($('en').value));if(e<=s)e=Math.min(S1,s+60);
+Object.assign(cur,{code:$('code').value.trim()||'วิชาใหม่',name:$('name').value.trim(),room:$('room').value.trim(),day:+$('day').value,start:s,end:e,color:col,note:$('note').value.trim()})}
+cur.locked=lk;
+if(isNew)L.push(cur);
+sv();render();$('ov').hidden=true};
+$('dl').onclick=()=>{if(cur.locked){$('lk').checked=false;lockUI();return}L=L.filter(c=>c.id!==cur.id);sv();render();$('ov').hidden=true};
+$('add').onclick=()=>edit(null,true);
+$('rs').onclick=()=>{if(confirm('รีเซ็ตกลับเป็นตารางเริ่มต้น?')){L=DEF();sv();render()}};
+render();
+</script></body></html>
